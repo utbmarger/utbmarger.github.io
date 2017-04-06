@@ -1,0 +1,33 @@
+p {
+    font-family: Verdana, arial, sans-serif;
+}
+
+header {
+    font-family: georgia , "Times new roman", serif;
+}
+
+body {
+    background-color: lightgreen;
+}
+
+article {
+    float:left;
+    width:500px;
+    padding-left: 20px;
+}
+
+section {
+    clear:both;
+}
+footer{
+    clear:both;
+    text-align: center;
+}
+
+a{
+    color: darkgreen;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
