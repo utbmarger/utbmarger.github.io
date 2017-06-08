@@ -1,5 +1,5 @@
 # HOWTO SCRIPT FOR UPLOADING TO GITHUB
 git add .
-git commit
+git commit -m "generic upload"
 git push -u origin master
 
