@@ -22,8 +22,8 @@ p{
 h1, h2, h3, h4, h5, h6, {
     font: normal 175% 'century gothic', arial, sans-serif;
     color: #43423F;
-    margin: 0 0 15px 0;
-    padding: 15px 0 5px 0;}
+    margin: 0 0 15% 0;
+    padding: 15% 0 5% 0;}
 
 h2{
     font: normal 175% 'century gothic', arial, sans-serif;
@@ -33,21 +33,21 @@ h2{
 h1{
     font: normal 175% 'century gothic', arial, sans-serif;
     color: #004de6;
-    margin: 0 0 15px 0;
-    padding: 15px 0 5px 0;
+    margin: 0 0 15% 0;
+    padding: 15% 0 5% 0;
         
 }
 
 h4, h5, h6{ 
     margin: 0;
-    padding: 0 0 5px 0;
+    padding: 0 0 5% 0;
     font: normal 120% arial, sans-serif;
     color: #004de6;
 }
 
 h5, h6{ 
     font: italic 95% arial, sans-serif;
-    padding: 0 0 15px 0;
+    padding: 0 0 15% 0;
     color: #000;}
 
 h6{ 
@@ -60,17 +60,6 @@ a, a:hover{
     color: #1293EE;
 }
 
-.left{ 
-    float: left;
-    width: auto;
-    margin-right: 10px;
-}
-
-.right{ 
-    float: right; 
-    width: auto;
-    margin-left: 10px;
-}
 
 .center{ 
     display: block;
@@ -82,31 +71,34 @@ ul{
     margin: 2px 0 22px 17px;
 }
 
+
 #main, #logo, #menubar, #site_content, #footer{ 
     margin-left: auto; 
     margin-right: auto;
+    width: 900px;
 }
 
 #header{ 
   height: 240px;
+  width: 900px;
 }
 
 #logo{ 
-    width: 825px;
+    width: 900px;
     position: relative;
     height: 200px;
     background: #ffffff url(../images/BrightHotellEmblem) no-repeat;
 }
 
 #menubar{ 
-    width: 877px;
+    width: 900px;
     height: 72px;
     padding: 0;
     background: #004de6;
 } 
 
 ul#menu, ul#menu li{ 
-    float: left;
+    float: center;
     margin: 0; 
     padding: 0;
 }
@@ -135,11 +127,12 @@ ul#menu li a:hover, ul#menu li.active a, ul#menu li.active a:hover{
 }
 
 #site_content{ 
-    width: 837px;
+    width: 900px;
     overflow: hidden;
     margin: 0 auto 0 auto;
     padding: 20px 24px 20px 37px;
-    background: #FFF url(../images/sidan.png) repeat-y;
+    background: #FFF;
+
 } 
 
 .sidebar{ 
@@ -150,8 +143,7 @@ ul#menu li a:hover, ul#menu li.active a, ul#menu li.active a:hover{
 
 #content{ 
     text-align: left;
-    width: 595px;
-    padding: 0;
+    width: 900px;
 }
 
 #content ul{ 
@@ -166,7 +158,7 @@ ul#menu li a:hover, ul#menu li.active a, ul#menu li.active a:hover{
 }
 
 #footer{ 
-    width: 878px;
+    width: 900px;
     font: normal 100% 'lucida sans unicode', arial, sans-serif;
     height: 33px;
     padding: 24px 0 5px 0;
@@ -196,7 +188,6 @@ h7{
     border: none;
     cursor: pointer;
    
-    /* copied from menu li a css above */
     letter-spacing: 0.1em;
     font: normal 100% 'lucida sans unicode', arial, sans-serif;
     display: block; 
@@ -208,7 +199,6 @@ h7{
     text-transform: uppercase;
     text-decoration: none;
     background: transparent;
-    /* end copy */
 }
 
 .dropdown {
@@ -243,76 +233,80 @@ h7{
     color: white;
 }
 
-@media (max-width:850px){
-    #menubar {
-        width:   
+
+
+ #map {
+        height: 400%;
+        width: 100%;
+       }
+
+@media (max-width: 850px){
+    #menubar
+    {
+        width: 150%;
+        text-align: center;
+        height: 150%;
     }
-    ul{
-        position: static;
-     }
-    ul#menu li{
-        display: block;
+
+    #ul#menu li a
+    {
+        float: down;
+        background-color: #000033;
+        width: 125%; 
+        height: 70px;
+        text-align: center;
     }
-}
-@keyframes slider {
+    
 
-0% {
-	left: 0;
-}
+    
+    #dropdown-content
+    {
+        width: 84%;
+        text-align: center;
+    }
+    
+    #footer
+    {
+        width: 100%;
+        text-align: center;
+    }
+    
+    
 
-20% {
-	left: 0;
-}
-
-25% {
-	left: -100%;
-}
-
-45% {
-    left: -100%;
-
-}
-
-50% {
-    left: -200%;
-
-}
-
-70% {
-	left: -200%;
-}
-
-75% {
-	left: -300%;
-}
-
-95% {
-	left: -300%;
-}
-
-100% {
-	left: -400%;
-
-}
-
-}
-
-#slider {
-	overflow: auto;
-}
-
-#slider figure img {
-	width: 20%;
-	float: left;
-}
-
-#slider figure {
-	position: relative;
-	width: 500%;
-	margin: 0;
-	left: 0;
-	text-align: left;
-	font-size: 0;
-	animation: 20s slider infinite; 
-
+    
+    #menubar
+    {
+        width: 250%;
+        float: left;
+        height: 150px;
+    }
+    
+    #header
+    {
+        width: 37.25%;
+        margin-left: 25px;
+    }
+    
+    #main, #footer
+    {
+        width: 80%;
+    }
+    
+    #logo{
+        width: 250%;
+    }
+    
+    #slider, #content, #background {
+        float: left;
+        width: 100%;
+    }
+    
+    #site_content{
+        float: left;
+        width: 100%;
+    }
+    
+    #sidebar{
+        float: center;
+    }
 }

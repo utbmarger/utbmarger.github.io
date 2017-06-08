@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <title>Bright Hotell</title>
         <link rel="stylesheet" type="text/css" href="hotell.css">
+        <link rel="icon" href="favicon.ico">
     </head>
 
     <body>
@@ -22,7 +23,7 @@
                         <li><a href="boka.html">Boka</a></li>
                         <li><a href="hitta.html">Hitta</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
-                        <div class="dropdown">      
+                        <div class="dropdown">    
                         <a class="dropbtn">Aktiviteter</a>
                         <div class="dropdown-content">
                             
@@ -49,16 +50,63 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue elit nec ex malesuada tincidunt. Fusce id mauris dolor. Phasellus accumsan quis tortor non ullamcorper. Ut interdum iaculis hendrerit. Nullam hendrerit lorem at porta euismod. Proin varius urna ac feugiat cursus. Duis nec quam ut libero volutpat malesuada. Duis efficitur ac lectus a porttitor. Fusce volutpat semper sapien, non commodo lectus posuere nec. Cras porta sapien in purus tempus, in venenatis urna sodales. Praesent id luctus leo. Nunc eget massa arcu. Ut finibus dui id metus efficitur, eu tempor nunc rutrum.
                         <br/><br/>
                         ALorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue elit nec ex malesuada tincidunt. Fusce id mauris dolor. Phasellus accumsan quis tortor non ullamcorper. Ut interdum iaculis hendrerit. Nullam hendrerit lorem at porta euismod. Proin varius urna ac feugiat cursus. Duis nec quam ut libero volutpat malesuada. Duis efficitur ac lectus a porttitor. Fusce volutpat semper sapien, non commodo lectus posuere nec. Cras porta sapien in purus tempus, in venenatis urna sodales. Praesent id luctus leo. Nunc eget massa arcu. Ut finibus dui id metus efficitur, eu tempor nunc rutrum..</p>
-                    <div id="slider" >
-<figure>
-<img src="brighthotell.jpg">
-<img src="hotell_5.png">
-<img src="hotell_4.jpg">
-<img src="hotell_2.jpg">
-<img src="hotell_6.jpg">
-</figure>	
+                        <div id="slider" >
+                        
+                            
+                          <div class="w3-content w3-display-container">
+                          <img class="mySlides" src="hotell_10.jpg" style="width:100%">
+                          <img class="mySlides" src="hotell_5.png" style="width:100%">
+                          <img class="mySlides" src="hotell_7.jpeg" style="width:100%">
+                          <img class="mySlides" src="hotell_8.jpg" style="width:100%">
+                          <img class="mySlides" src="hotell_9.jpg" style="width:100%">
 
-</div>
+
+
+
+                              
+                          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                        </div>
+
+                        <script>
+                        var slideIndex = 1;
+                        showDivs(slideIndex);
+
+                        function plusDivs(n) {
+                          showDivs(slideIndex += n);
+                        }
+
+                        function showDivs(n) {
+                          var i;
+                          var x = document.getElementsByClassName("mySlides");
+                          if (n > x.length) {slideIndex = 1}    
+                          if (n < 1) {slideIndex = x.length}
+                          for (i = 0; i < x.length; i++) {
+                             x[i].style.display = "none";  
+                          }
+                          x[slideIndex-1].style.display = "block";  
+                        }
+                        </script>
+                            
+                            
+                            
+                        <script>
+                        var myIndex = 0;
+                        carousel();
+
+                        function carousel() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides");
+                            for (i = 0; i < x.length; i++) {
+                               x[i].style.display = "none";  
+                            }
+                            myIndex++;
+                            if (myIndex > x.length) {myIndex = 1}    
+                            x[myIndex-1].style.display = "block";  
+                            setTimeout(carousel, 2000); // Change image every 2 seconds
+                        }
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
